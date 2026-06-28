@@ -7,13 +7,13 @@
   ],
   "predictions": [
     {
-      "as_of": "2026-06-28T09:30:00Z",
+      "as_of": "2026-06-28T14:12:53.285816+00:00",
       "target_date": "2026-06-29",
-      "prev_close": 2673000,
+      "prev_close": 2673000.0,
       "call": "DOWN",
-      "score": -48.55,
-      "conviction": "High",
-      "confidence_pct": 71.8,
+      "score": -20.26,
+      "conviction": "Moderate",
+      "confidence_pct": 59.1,
       "actual": null,
       "actual_return_pct": null,
       "correct": null
