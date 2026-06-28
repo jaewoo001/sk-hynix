@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Render data/latest.json into a self-contained Korean dashboard.html."""
-import json, os, html
+import json, os, html, re
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 LATEST = os.path.join(HERE, "data", "latest.json")
@@ -52,6 +52,17 @@ def kr_note(factor, active, inp):
     return ""
 
 
+def note_cell(factor, note):
+    """The news note can be long, so render it as compact bullets so it stays
+    narrow and doesn't force the other columns to wrap. Other notes stay plain."""
+    if factor == "news" and note and note != "—":
+        parts = [x.strip() for x in re.split(r',\s*|\.\s+|·\s*', note) if x.strip()]
+        if len(parts) > 1:
+            lis = "".join(f"<li>{esc(x)}</li>" for x in parts)
+            return f'<td class="note"><ul class="cb">{lis}</ul></td>'
+    return f'<td class="note">{esc(note)}</td>'
+
+
 def bar(contribution, maxabs=42):
     pct = min(abs(contribution) / maxabs, 1.0) * 50.0
     color = "#0a7d3c" if contribution > 0 else ("#c02626" if contribution < 0 else "#999")
@@ -76,19 +87,19 @@ def main():
     for b in r["breakdown"]:
         label = FACTOR_LABELS.get(b["factor"], b["factor"])
         note = kr_note(b["factor"], b["active"], inp)
+        ncell = note_cell(b["factor"], note)
         if b["active"]:
             color = '#0a7d3c' if b['contribution'] > 0 else ('#c02626' if b['contribution'] < 0 else '#666')
-            rows += f'<tr><td class="fname">{esc(label)}</td>' \
-                    f'<td class="num">{b["weight"]}</td>' \
-                    f'<td class="num">{b["sub"]:+.2f}</td>' \
-                    f'<td class="num strong" style="color:{color}">{b["contribution"]:+.1f}</td>' \
-                    f'<td>{bar(b["contribution"])}</td>' \
-                    f'<td class="note">{esc(note)}</td></tr>'
+            rows += ('<tr><td class="fname">' + esc(label) + '</td>'
+                     f'<td class="num">{b["weight"]}</td>'
+                     f'<td class="num">{b["sub"]:+.2f}</td>'
+                     f'<td class="num strong" style="color:{color}">{b["contribution"]:+.1f}</td>'
+                     f'<td>{bar(b["contribution"])}</td>' + ncell + '</tr>')
         else:
-            rows += f'<tr class="inactive"><td class="fname">{esc(label)}</td>' \
-                    f'<td class="num">{b["weight"]}</td>' \
-                    f'<td class="num">—</td><td class="num">—</td><td>{bar(0)}</td>' \
-                    f'<td class="note">{esc(note)}</td></tr>'
+            rows += ('<tr class="inactive"><td class="fname">' + esc(label) + '</td>'
+                     f'<td class="num">{b["weight"]}</td>'
+                     f'<td class="num">—</td><td class="num">—</td>'
+                     f'<td>{bar(0)}</td>' + ncell + '</tr>')
 
     recent = d.get("recent", [])[::-1]
     rrows = ""
@@ -147,10 +158,13 @@ h2 {{ font-size:14px; letter-spacing:.3px; color:#555; margin:0 0 12px; font-wei
 table {{ width:100%; border-collapse:collapse; font-size:13px; }}
 th {{ text-align:left; color:#888; font-weight:600; font-size:11px; padding:6px 8px; border-bottom:1px solid #eee; }}
 td {{ padding:9px 8px; border-bottom:1px solid #f0f1f3; vertical-align:middle; }}
-.fname {{ font-weight:600; max-width:220px; }}
+.fct {{ table-layout:fixed; }}
+.fname {{ font-weight:600; word-break:keep-all; }}
 .num {{ text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }}
 .strong {{ font-weight:700; }}
 .note {{ color:#777; font-size:11.5px; }}
+.cb {{ margin:0; padding-left:15px; }}
+.cb li {{ font-size:11px; color:#777; line-height:1.5; margin-bottom:2px; }}
 tr.inactive {{ opacity:.5; }}
 .bar {{ display:flex; width:120px; height:10px; }}
 .bneg, .bpos {{ width:50%; height:100%; background:#f1f2f4; }}
@@ -159,10 +173,6 @@ tr.inactive {{ opacity:.5; }}
 .hit {{ color:#0a7d3c; font-weight:600; }} .miss {{ color:#c02626; font-weight:600; }}
 .pend {{ color:#9a6b00; }} .na {{ color:#999; }}
 .disc {{ font-size:11.5px; color:#8a8d92; line-height:1.6; }}
-.help p {{ font-size:12.5px; color:#444; line-height:1.7; margin:0 0 10px; }}
-.help b {{ color:#1a1c1f; }}
-.help .sec {{ margin:2px 0 4px; }}
-.gloss {{ margin-top:2px; }}
 .gloss td {{ vertical-align:top; font-size:12.5px; color:#444; line-height:1.6; }}
 .gloss td:first-child {{ font-weight:700; color:#1a1c1f; white-space:nowrap; width:130px; }}
 .grid {{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; }}
@@ -184,7 +194,8 @@ tr.inactive {{ opacity:.5; }}
 
   <div class="card">
     <h2>근거 — 요인별 분석</h2>
-    <table>
+    <table class="fct">
+      <colgroup><col style="width:188px"><col style="width:56px"><col style="width:52px"><col style="width:60px"><col style="width:132px"><col></colgroup>
       <tr><th>요인</th><th class="num">가중치</th><th class="num">점수</th><th class="num">기여</th><th>−&nbsp;&nbsp;0&nbsp;&nbsp;+</th><th>세부 내용</th></tr>
       {rows}
     </table>
@@ -237,7 +248,7 @@ tr.inactive {{ opacity:.5; }}
   </div>
 
   <div class="card">
-    <p class="disc"><b>투자 자문이 아닙니다.</b> 개별 종목의 일일 등락 예측은 동전 던지기에 가깝습니다. 이 도구는 우연보다 조금 더 자주 맞히는 것을 목표로 하는 투명한 휴리스틱이며, 판단 근거를 함께 보여줍니다. 확신도는 최대 72%로 제한됩니다. 개별 예측이 아니라 위의 적중 기록으로 판단하세요. 데이터 출처: 구글 파이낸스(지연 시세).</p>
+    <p class="disc"><b>투자 자문이 아닙니다.</b> 개별 종목의 일일 등락 예측은 동전 던지기에 가깝습니다. 이 도구는 우연보다 조금 더 자주 맞히는 것을 목표로 하는 투명한 휴리스틱이며, 판단 근거를 함께 보여줍니다. 확신도는 최대 72%로 제한됩니다. 개별 예측이 아니라 위의 적중 기록으로 판단하세요. 데이터 출처: 구글 파이낸스/yfinance(지연 시세).</p>
   </div>
 </div></body></html>"""
 
