@@ -1,83 +1,80 @@
 {
-  "generated": "2026-06-28T13:00:09.748306Z",
+  "generated": "2026-06-28T14:53:57.565580Z",
   "target_date": "2026-06-29",
   "stock": "SK Hynix (KRX:000660)",
-  "prev_close": 2673000,
+  "prev_close": 2673000.0,
   "inputs": {
-    "as_of": "2026-06-28T09:30:00Z",
+    "as_of": "2026-06-28T14:53:57.538855+00:00",
     "target_date": "2026-06-29",
     "last_session_date": "2026-06-26",
-    "hynix_prev_close": 2673000,
+    "hynix_prev_close": 2673000.0,
     "last_session_return_pct": -8.36,
     "sox_pct": -5.29,
     "mu_pct": -6.69,
     "nvda_pct": null,
-    "nasdaq_pct": -1.09,
+    "nasdaq_pct": -0.24,
     "vix_pct": -2.54,
-    "usdkrw": 1535.29,
-    "usdkrw_pct": 0.0,
-    "news_sentiment": 0.4,
-    "news_note": "Bullish catalysts: NVIDIA-SK Hynix multiyear HBM partnership, Micron earnings beat + raised targets, Jensen Huang says memory shortage 'could last years', Samsung/SK Hynix to unveil investment plans. Offset by broad risk-off tape (KOSPI circuit breaker Fri).",
+    "usdkrw": 1535.0,
+    "usdkrw_pct": -0.74,
+    "news_sentiment": 0.91,
+    "news_note": "\ud0a4\uc6cc\ub4dc \uc2a4\uce94: \ud638\uc7ac 65\uac74 \u00b7 \uc545\uc7ac 3\uac74 (\ub2e4\ub9e4\uccb4 \uc81c\ubaa9 187\uac1c)",
     "data_sources": [
-      "Google Finance 000660:KRX (Hynix close, Jun 26)",
-      "Google Finance SOX:INDEXNASDAQ (Jun 26)",
-      "Google Finance MU:NASDAQ (Jun 26)",
-      "Google Finance USD-KRW (Jun 28)"
+      "yfinance + Google News RSS (multi-outlet, EN+KO)"
     ]
   },
   "result": {
-    "score": -48.55,
-    "call": "DOWN",
-    "conviction": "High",
-    "confidence_pct": 71.8,
+    "score": -12.9,
+    "call": "NEUTRAL",
+    "conviction": "Low",
+    "confidence_pct": 55.8,
     "breakdown": [
       {
         "factor": "us_semis",
-        "weight": 43.9,
+        "weight": 39.1,
         "active": true,
         "sub": -1.0,
-        "contribution": -43.9,
+        "contribution": -39.13,
         "note": "semis avg -6.13% (MU -6.69, SOX -5.29)"
       },
       {
         "factor": "us_broad",
-        "weight": 14.6,
+        "weight": 13.0,
         "active": true,
-        "sub": -0.684,
-        "contribution": -10.01,
-        "note": "Nasdaq -1.09%, VIX -2.5%"
+        "sub": -0.118,
+        "contribution": -1.53,
+        "note": "Nasdaq -0.24%, VIX -2.5%"
       },
       {
         "factor": "momentum",
-        "weight": 14.6,
+        "weight": 13.0,
         "active": true,
         "sub": -0.1,
-        "contribution": -1.46,
+        "contribution": -1.3,
         "note": "last move -8.36% (trend -0.50, reversion +0.40)"
       },
       {
         "factor": "fx",
-        "weight": 9.8,
+        "weight": 8.7,
         "active": true,
-        "sub": -0.0,
-        "contribution": -0.0,
-        "note": "USD/KRW +0.00% (flat)"
+        "sub": 1.0,
+        "contribution": 8.7,
+        "note": "USD/KRW -0.74% (won stronger -> risk-on)"
       },
       {
         "factor": "technicals",
-        "weight": 10,
-        "active": false,
-        "sub": null,
-        "contribution": 0.0,
-        "note": "warming up (need ~15-20 sessions of history)"
+        "weight": 10.9,
+        "active": true,
+        "sub": 0.6,
+        "contribution": 6.52,
+        "note": "px vs MA20 +11.0%, RSI 66"
       },
       {
         "factor": "news",
-        "weight": 17.1,
+        "weight": 15.2,
         "active": true,
-        "sub": 0.4,
-        "contribution": 6.83,
-        "note": "Bullish catalysts: NVIDIA-SK Hynix multiyear HBM partnership, Micron earnings beat + raised targets, Jensen Huang says memory shortage 'could last years', Samsung/SK Hynix to unveil investment plans. Offset by broad risk-off tape (KOSPI circuit breaker Fri)."
+        "sub": 0.91,
+        "contribution": 13.85,
+        "note": "\ud0a4\uc6cc\ub4dc \uc2a4\uce94: \ud638\uc7ac 65\uac74 \u00b7 \uc545\uc7ac 3\uac74 (\ub2e4\ub9e4\uccb4 \uc81c\ubaa9 187\uac1c)"
       },
       {
         "factor": "foreign_flows",
@@ -96,13 +93,13 @@
   },
   "recent": [
     {
-      "as_of": "2026-06-28T09:30:00Z",
+      "as_of": "2026-06-28T14:53:57.538855+00:00",
       "target_date": "2026-06-29",
-      "prev_close": 2673000,
-      "call": "DOWN",
-      "score": -48.55,
-      "conviction": "High",
-      "confidence_pct": 71.8,
+      "prev_close": 2673000.0,
+      "call": "NEUTRAL",
+      "score": -12.9,
+      "conviction": "Low",
+      "confidence_pct": 55.8,
       "actual": null,
       "actual_return_pct": null,
       "correct": null
