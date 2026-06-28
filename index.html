@@ -36,6 +36,9 @@ tr.inactive { opacity:.5; }
 .help p { font-size:12.5px; color:#444; line-height:1.7; margin:0 0 10px; }
 .help b { color:#1a1c1f; }
 .help .sec { margin:2px 0 4px; }
+.gloss { margin-top:2px; }
+.gloss td { vertical-align:top; font-size:12.5px; color:#444; line-height:1.6; }
+.gloss td:first-child { font-weight:700; color:#1a1c1f; white-space:nowrap; width:130px; }
 .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; }
 .kv { background:#fafbfc; border:1px solid #eef0f2; border-radius:10px; padding:10px 12px; }
 .kv .k { font-size:11px; color:#888; }
@@ -43,13 +46,13 @@ tr.inactive { opacity:.5; }
 </style></head>
 <body><div class="wrap">
   <h1>SK하이닉스 · KRX 000660 — 일일 주가 방향 예측</h1>
-  <div class="sub">예측 대상 거래일 <b>2026-06-29</b> · 전일 종가 ₩2,673,000 · 생성 2026-06-28 14:12 UTC</div>
+  <div class="sub">예측 대상 거래일 <b>2026-06-29</b> · 전일 종가 ₩2,673,000 · 생성 2026-06-28 13:00 UTC</div>
 
   <div class="card callbox">
     <div class="callword">하락</div>
     <div class="callmeta">
-      <span class="pill">점수 -20</span>
-      <span class="pill">확신도 보통 · 약 59.1%</span>
+      <span class="pill">점수 -49</span>
+      <span class="pill">확신도 높음 · 약 71.8%</span>
     </div>
   </div>
 
@@ -57,7 +60,7 @@ tr.inactive { opacity:.5; }
     <h2>근거 — 요인별 분석</h2>
     <table>
       <tr><th>요인</th><th class="num">가중치</th><th class="num">점수</th><th class="num">기여</th><th>−&nbsp;&nbsp;0&nbsp;&nbsp;+</th><th>세부 내용</th></tr>
-      <tr><td class="fname">미국 반도체 (마이크론·SOX)</td><td class="num">43.9</td><td class="num">-1.00</td><td class="num strong" style="color:#c02626">-43.9</td><td><div class="bar"><div class="bneg" style="display:flex;justify-content:flex-end"><div class="fill" style="width:50.0%;background:#c02626"></div></div><div class="bpos"></div></div></td><td class="note">마이크론 -6.69%, SOX -5.29%</td></tr><tr><td class="fname">미국 시장 전반 (나스닥·VIX)</td><td class="num">14.6</td><td class="num">-0.12</td><td class="num strong" style="color:#c02626">-1.7</td><td><div class="bar"><div class="bneg" style="display:flex;justify-content:flex-end"><div class="fill" style="width:2.0%;background:#c02626"></div></div><div class="bpos"></div></div></td><td class="note">나스닥 -0.24%, VIX -2.54%</td></tr><tr><td class="fname">하이닉스 모멘텀·평균회귀</td><td class="num">14.6</td><td class="num">-0.10</td><td class="num strong" style="color:#c02626">-1.5</td><td><div class="bar"><div class="bneg" style="display:flex;justify-content:flex-end"><div class="fill" style="width:1.7%;background:#c02626"></div></div><div class="bpos"></div></div></td><td class="note">전일 등락 -8.36%</td></tr><tr><td class="fname">원/달러 환율</td><td class="num">9.8</td><td class="num">+1.00</td><td class="num strong" style="color:#0a7d3c">+9.8</td><td><div class="bar"><div class="bneg"></div><div class="bpos"><div class="fill" style="width:11.6%;background:#0a7d3c"></div></div></div></td><td class="note">원/달러 -0.74% (원화 강세→위험선호)</td></tr><tr class="inactive"><td class="fname">기술적 지표 (20일선·RSI)</td><td class="num">10</td><td class="num">—</td><td class="num">—</td><td><div class="bar"><div class="bneg"></div><div class="bpos"><div class="fill" style="width:0.0%;background:#999"></div></div></div></td><td class="note">워밍업 중 (약 15~20거래일 데이터 필요)</td></tr><tr><td class="fname">뉴스·촉매</td><td class="num">17.1</td><td class="num">+1.00</td><td class="num strong" style="color:#0a7d3c">+17.1</td><td><div class="bar"><div class="bneg"></div><div class="bpos"><div class="fill" style="width:20.3%;background:#0a7d3c"></div></div></div></td><td class="note">키워드 스캔: 호재 6건 · 악재 0건 (제목 20개)</td></tr><tr class="inactive"><td class="fname">외국인 순매수 (KRX)</td><td class="num">8</td><td class="num">—</td><td class="num">—</td><td><div class="bar"><div class="bneg"></div><div class="bpos"><div class="fill" style="width:0.0%;background:#999"></div></div></div></td><td class="note">장 마감 후 공개 — 데이터 없음</td></tr>
+      <tr><td class="fname">미국 반도체 (마이크론·SOX)</td><td class="num">43.9</td><td class="num">-1.00</td><td class="num strong" style="color:#c02626">-43.9</td><td><div class="bar"><div class="bneg" style="display:flex;justify-content:flex-end"><div class="fill" style="width:50.0%;background:#c02626"></div></div><div class="bpos"></div></div></td><td class="note">마이크론 -6.69%, SOX -5.29%</td></tr><tr><td class="fname">미국 시장 전반 (나스닥·VIX)</td><td class="num">14.6</td><td class="num">-0.68</td><td class="num strong" style="color:#c02626">-10.0</td><td><div class="bar"><div class="bneg" style="display:flex;justify-content:flex-end"><div class="fill" style="width:11.9%;background:#c02626"></div></div><div class="bpos"></div></div></td><td class="note">나스닥 -1.09%, VIX -2.54%</td></tr><tr><td class="fname">하이닉스 모멘텀·평균회귀</td><td class="num">14.6</td><td class="num">-0.10</td><td class="num strong" style="color:#c02626">-1.5</td><td><div class="bar"><div class="bneg" style="display:flex;justify-content:flex-end"><div class="fill" style="width:1.7%;background:#c02626"></div></div><div class="bpos"></div></div></td><td class="note">전일 등락 -8.36%</td></tr><tr><td class="fname">원/달러 환율</td><td class="num">9.8</td><td class="num">-0.00</td><td class="num strong" style="color:#666">-0.0</td><td><div class="bar"><div class="bneg"></div><div class="bpos"><div class="fill" style="width:0.0%;background:#999"></div></div></div></td><td class="note">원/달러 +0.00% (보합)</td></tr><tr class="inactive"><td class="fname">기술적 지표 (20일선·RSI)</td><td class="num">10</td><td class="num">—</td><td class="num">—</td><td><div class="bar"><div class="bneg"></div><div class="bpos"><div class="fill" style="width:0.0%;background:#999"></div></div></div></td><td class="note">워밍업 중 (약 15~20거래일 데이터 필요)</td></tr><tr><td class="fname">뉴스·촉매</td><td class="num">17.1</td><td class="num">+0.40</td><td class="num strong" style="color:#0a7d3c">+6.8</td><td><div class="bar"><div class="bneg"></div><div class="bpos"><div class="fill" style="width:8.1%;background:#0a7d3c"></div></div></div></td><td class="note">Bullish catalysts: NVIDIA-SK Hynix multiyear HBM partnership, Micron earnings beat + raised targets, Jensen Huang says memory shortage &#x27;could last years&#x27;, Samsung/SK Hynix to unveil investment plans. Offset by broad risk-off tape (KOSPI circuit breaker Fri).</td></tr><tr class="inactive"><td class="fname">외국인 순매수 (KRX)</td><td class="num">8</td><td class="num">—</td><td class="num">—</td><td><div class="bar"><div class="bneg"></div><div class="bpos"><div class="fill" style="width:0.0%;background:#999"></div></div></div></td><td class="note">장 마감 후 공개 — 데이터 없음</td></tr>
     </table>
   </div>
 
@@ -67,9 +70,9 @@ tr.inactive { opacity:.5; }
       <div class="kv"><div class="k">하이닉스 전일 등락</div><div class="v">-8.36%</div></div>
       <div class="kv"><div class="k">마이크론 (야간)</div><div class="v">-6.69%</div></div>
       <div class="kv"><div class="k">SOX (야간)</div><div class="v">-5.29%</div></div>
-      <div class="kv"><div class="k">나스닥</div><div class="v">-0.24%</div></div>
-      <div class="kv"><div class="k">원/달러</div><div class="v">1535.0</div></div>
-      <div class="kv"><div class="k">뉴스 심리</div><div class="v">+1.0</div></div>
+      <div class="kv"><div class="k">나스닥</div><div class="v">-1.09%</div></div>
+      <div class="kv"><div class="k">원/달러</div><div class="v">1535.29</div></div>
+      <div class="kv"><div class="k">뉴스 심리</div><div class="v">+0.4</div></div>
     </div>
   </div>
 
@@ -78,28 +81,33 @@ tr.inactive { opacity:.5; }
     <p style="margin:0 0 14px;font-size:14px">아직 채점된 예측이 없습니다 — 첫 거래일 종료 후 적중률이 표시됩니다.</p>
     <table>
       <tr><th>거래일</th><th>예측</th><th class="num">점수</th><th>실제</th><th>결과</th></tr>
-      <tr><td>2026-06-29</td><td class="strong" style="color:#c02626">하락</td><td class="num">-20</td><td>—</td><td><span class="pend">대기중</span></td></tr>
+      <tr><td>2026-06-29</td><td class="strong" style="color:#c02626">하락</td><td class="num">-49</td><td>—</td><td><span class="pend">대기중</span></td></tr>
     </table>
   </div>
 
   <div class="card">
     <h2>도움말 — 용어 설명</h2>
-    <div class="help">
-      <p><b>예측</b> — 다음 거래일에 SK하이닉스가 전일 종가 대비 오를지(<span style="color:#0a7d3c">상승</span>) · 내릴지(<span style="color:#c02626">하락</span>) · 뚜렷하지 않은지(중립)를 나타냅니다.</p>
-      <p><b>점수</b> — 모든 요인을 합산한 종합 점수입니다(범위 −100 ~ +100). <b>+15 이상이면 상승</b>, <b>−15 이하면 하락</b>, 그 사이는 중립입니다. 0에서 멀수록 신호가 강합니다.</p>
-      <p><b>확신도</b> — 점수의 크기를 신뢰 수준으로 바꾼 값입니다. 등급(높음/보통/낮음)과 백분율로 함께 표시하며, 동전 던지기(50%)보다 얼마나 유리한지를 뜻하고 최대 72%로 제한됩니다. <b>확실성을 보장하지 않습니다.</b></p>
-      <p class="sec"><b>요인</b> — 주가 방향에 영향을 주는 항목들:</p>
-      <p style="margin-top:0">· <b>미국 반도체</b>: 간밤 마이크론·필라델피아 반도체지수(SOX) 등락 — 가장 강력한 신호.<br>
-      · <b>미국 시장 전반</b>: 나스닥 등락과 VIX(공포지수).<br>
-      · <b>하이닉스 모멘텀</b>: 전일 등락폭(급락 시 반등 가능성도 반영).<br>
-      · <b>원/달러 환율</b>: 원화 약세는 위험회피 신호로 부정적.<br>
-      · <b>기술적 지표</b>: 20일 이동평균·RSI(거래일이 쌓이면 작동).<br>
-      · <b>뉴스·촉매</b>: 호재/악재 뉴스 심리.<br>
-      · <b>외국인 순매수</b>: 외국인 매매 동향(데이터가 있을 때만).</p>
-      <p><b>가중치</b> — 각 요인의 중요도입니다(합계 100). 클수록 최종 점수에 더 크게 반영됩니다. 데이터가 없는 요인은 비활성화되고 그 가중치는 나머지 요인에 재배분됩니다.</p>
-      <p><b>점수(요인별)</b> — 각 요인의 방향·강도(−1 ~ +1). <b>기여</b>는 그 요인이 종합 점수에 더한 실제 값(요인 점수 × 가중치)이며, 막대는 음(−, 빨강)·양(+, 초록) 방향을 보여줍니다.</p>
-      <p><b>예측 적중 기록</b> — 과거 예측을 실제 결과와 비교한 기록입니다. 개별 예측 하나가 아니라 <b>누적 적중률</b>로 이 도구를 평가하세요(중립 예측은 채점 제외).</p>
-    </div>
+    <table class="gloss">
+      <tr><th>용어</th><th>설명</th></tr>
+      <tr><td>예측</td><td>다음 거래일에 SK하이닉스가 전일 종가 대비 오를지(<span style="color:#0a7d3c">상승</span>) · 내릴지(<span style="color:#c02626">하락</span>) · 뚜렷하지 않은지(중립)를 나타냅니다.</td></tr>
+      <tr><td>점수</td><td>모든 요인을 합산한 종합 점수(−100 ~ +100). <b>+15 이상 상승</b>, <b>−15 이하 하락</b>, 그 사이는 중립. 0에서 멀수록 강한 신호입니다.</td></tr>
+      <tr><td>확신도</td><td>점수의 크기를 신뢰 수준으로 환산한 값. 등급(높음/보통/낮음)과 백분율로 표시하며, 동전 던지기(50%)보다 얼마나 유리한지를 뜻하고 최대 72%로 제한됩니다. <b>확실성 보장이 아닙니다.</b></td></tr>
+      <tr><td>가중치</td><td>각 요인의 중요도(합계 100). 클수록 종합 점수에 더 크게 반영됩니다. 데이터가 없는 요인은 비활성화되고 그 가중치는 나머지 요인에 재배분됩니다.</td></tr>
+      <tr><td>점수(요인별)</td><td>각 요인의 방향·강도(−1 ~ +1).</td></tr>
+      <tr><td>기여</td><td>그 요인이 종합 점수에 더한 실제 값(요인 점수 × 가중치). 막대는 음(−, 빨강)·양(+, 초록) 방향을 보여줍니다.</td></tr>
+      <tr><td>예측 적중 기록</td><td>과거 예측을 실제 결과와 비교한 기록. 개별 예측이 아니라 <b>누적 적중률</b>로 평가하세요(중립 예측은 채점 제외).</td></tr>
+    </table>
+    <h2 style="margin-top:22px">요인 설명</h2>
+    <table class="gloss">
+      <tr><th>요인</th><th>의미</th></tr>
+      <tr><td>미국 반도체</td><td>간밤 마이크론·필라델피아 반도체지수(SOX) 등락 — 가장 강력한 신호.</td></tr>
+      <tr><td>미국 시장 전반</td><td>나스닥 등락과 VIX(공포지수).</td></tr>
+      <tr><td>하이닉스 모멘텀</td><td>전일 등락폭(급락 시 반등 가능성도 반영).</td></tr>
+      <tr><td>원/달러 환율</td><td>원화 약세는 위험회피 신호로 부정적.</td></tr>
+      <tr><td>기술적 지표</td><td>20일 이동평균·RSI(거래일이 쌓이면 작동).</td></tr>
+      <tr><td>뉴스·촉매</td><td>호재/악재 뉴스 심리.</td></tr>
+      <tr><td>외국인 순매수</td><td>외국인 매매 동향(데이터가 있을 때만).</td></tr>
+    </table>
   </div>
 
   <div class="card">
