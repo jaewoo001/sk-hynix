@@ -159,6 +159,9 @@ tr.inactive {{ opacity:.5; }}
 .hit {{ color:#0a7d3c; font-weight:600; }} .miss {{ color:#c02626; font-weight:600; }}
 .pend {{ color:#9a6b00; }} .na {{ color:#999; }}
 .disc {{ font-size:11.5px; color:#8a8d92; line-height:1.6; }}
+.help p {{ font-size:12.5px; color:#444; line-height:1.7; margin:0 0 10px; }}
+.help b {{ color:#1a1c1f; }}
+.help .sec {{ margin:2px 0 4px; }}
 .grid {{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; }}
 .kv {{ background:#fafbfc; border:1px solid #eef0f2; border-radius:10px; padding:10px 12px; }}
 .kv .k {{ font-size:11px; color:#888; }}
@@ -172,8 +175,7 @@ tr.inactive {{ opacity:.5; }}
     <div class="callword">{esc(CALL_KR.get(call, call))}</div>
     <div class="callmeta">
       <span class="pill">점수 {r['score']:+.0f}</span>
-      <span class="pill">확신도 {esc(CONV_KR.get(r['conviction'], r['conviction']))}</span>
-      <span class="pill">약 {r['confidence_pct']}% 우위</span>
+      <span class="pill">확신도 {esc(CONV_KR.get(r['conviction'], r['conviction']))} · 약 {r['confidence_pct']}%</span>
     </div>
   </div>
 
@@ -204,6 +206,26 @@ tr.inactive {{ opacity:.5; }}
       <tr><th>거래일</th><th>예측</th><th class="num">점수</th><th>실제</th><th>결과</th></tr>
       {rrows}
     </table>
+  </div>
+
+  <div class="card">
+    <h2>도움말 — 용어 설명</h2>
+    <div class="help">
+      <p><b>예측</b> — 다음 거래일에 SK하이닉스가 전일 종가 대비 오를지(<span style="color:#0a7d3c">상승</span>) · 내릴지(<span style="color:#c02626">하락</span>) · 뚜렷하지 않은지(중립)를 나타냅니다.</p>
+      <p><b>점수</b> — 모든 요인을 합산한 종합 점수입니다(범위 −100 ~ +100). <b>+15 이상이면 상승</b>, <b>−15 이하면 하락</b>, 그 사이는 중립입니다. 0에서 멀수록 신호가 강합니다.</p>
+      <p><b>확신도</b> — 점수의 크기를 신뢰 수준으로 바꾼 값입니다. 등급(높음/보통/낮음)과 백분율로 함께 표시하며, 동전 던지기(50%)보다 얼마나 유리한지를 뜻하고 최대 72%로 제한됩니다. <b>확실성을 보장하지 않습니다.</b></p>
+      <p class="sec"><b>요인</b> — 주가 방향에 영향을 주는 항목들:</p>
+      <p style="margin-top:0">· <b>미국 반도체</b>: 간밤 마이크론·필라델피아 반도체지수(SOX) 등락 — 가장 강력한 신호.<br>
+      · <b>미국 시장 전반</b>: 나스닥 등락과 VIX(공포지수).<br>
+      · <b>하이닉스 모멘텀</b>: 전일 등락폭(급락 시 반등 가능성도 반영).<br>
+      · <b>원/달러 환율</b>: 원화 약세는 위험회피 신호로 부정적.<br>
+      · <b>기술적 지표</b>: 20일 이동평균·RSI(거래일이 쌓이면 작동).<br>
+      · <b>뉴스·촉매</b>: 호재/악재 뉴스 심리.<br>
+      · <b>외국인 순매수</b>: 외국인 매매 동향(데이터가 있을 때만).</p>
+      <p><b>가중치</b> — 각 요인의 중요도입니다(합계 100). 클수록 최종 점수에 더 크게 반영됩니다. 데이터가 없는 요인은 비활성화되고 그 가중치는 나머지 요인에 재배분됩니다.</p>
+      <p><b>점수(요인별)</b> — 각 요인의 방향·강도(−1 ~ +1). <b>기여</b>는 그 요인이 종합 점수에 더한 실제 값(요인 점수 × 가중치)이며, 막대는 음(−, 빨강)·양(+, 초록) 방향을 보여줍니다.</p>
+      <p><b>예측 적중 기록</b> — 과거 예측을 실제 결과와 비교한 기록입니다. 개별 예측 하나가 아니라 <b>누적 적중률</b>로 이 도구를 평가하세요(중립 예측은 채점 제외).</p>
+    </div>
   </div>
 
   <div class="card">
