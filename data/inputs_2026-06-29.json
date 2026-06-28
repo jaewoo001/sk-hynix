@@ -1,0 +1,19 @@
+{
+  "as_of": "2026-06-28T13:56:51.654629+00:00",
+  "target_date": "2026-06-29",
+  "last_session_date": "2026-06-26",
+  "hynix_prev_close": 2673000.0,
+  "last_session_return_pct": -8.36,
+  "sox_pct": -5.29,
+  "mu_pct": -6.69,
+  "nvda_pct": null,
+  "nasdaq_pct": -0.24,
+  "vix_pct": -2.54,
+  "usdkrw": 1535.0,
+  "usdkrw_pct": -0.74,
+  "news_sentiment": 1.0,
+  "news_note": "키워드 스캔: 호재 6건 · 악재 0건 (제목 20개)",
+  "data_sources": [
+    "yfinance (GitHub Actions); keyword news scan"
+  ]
+}
