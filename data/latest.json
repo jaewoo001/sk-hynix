@@ -1,0 +1,111 @@
+{
+  "generated": "2026-06-28T13:00:09.748306Z",
+  "target_date": "2026-06-29",
+  "stock": "SK Hynix (KRX:000660)",
+  "prev_close": 2673000,
+  "inputs": {
+    "as_of": "2026-06-28T09:30:00Z",
+    "target_date": "2026-06-29",
+    "last_session_date": "2026-06-26",
+    "hynix_prev_close": 2673000,
+    "last_session_return_pct": -8.36,
+    "sox_pct": -5.29,
+    "mu_pct": -6.69,
+    "nvda_pct": null,
+    "nasdaq_pct": -1.09,
+    "vix_pct": -2.54,
+    "usdkrw": 1535.29,
+    "usdkrw_pct": 0.0,
+    "news_sentiment": 0.4,
+    "news_note": "Bullish catalysts: NVIDIA-SK Hynix multiyear HBM partnership, Micron earnings beat + raised targets, Jensen Huang says memory shortage 'could last years', Samsung/SK Hynix to unveil investment plans. Offset by broad risk-off tape (KOSPI circuit breaker Fri).",
+    "data_sources": [
+      "Google Finance 000660:KRX (Hynix close, Jun 26)",
+      "Google Finance SOX:INDEXNASDAQ (Jun 26)",
+      "Google Finance MU:NASDAQ (Jun 26)",
+      "Google Finance USD-KRW (Jun 28)"
+    ]
+  },
+  "result": {
+    "score": -48.55,
+    "call": "DOWN",
+    "conviction": "High",
+    "confidence_pct": 71.8,
+    "breakdown": [
+      {
+        "factor": "us_semis",
+        "weight": 43.9,
+        "active": true,
+        "sub": -1.0,
+        "contribution": -43.9,
+        "note": "semis avg -6.13% (MU -6.69, SOX -5.29)"
+      },
+      {
+        "factor": "us_broad",
+        "weight": 14.6,
+        "active": true,
+        "sub": -0.684,
+        "contribution": -10.01,
+        "note": "Nasdaq -1.09%, VIX -2.5%"
+      },
+      {
+        "factor": "momentum",
+        "weight": 14.6,
+        "active": true,
+        "sub": -0.1,
+        "contribution": -1.46,
+        "note": "last move -8.36% (trend -0.50, reversion +0.40)"
+      },
+      {
+        "factor": "fx",
+        "weight": 9.8,
+        "active": true,
+        "sub": -0.0,
+        "contribution": -0.0,
+        "note": "USD/KRW +0.00% (flat)"
+      },
+      {
+        "factor": "technicals",
+        "weight": 10,
+        "active": false,
+        "sub": null,
+        "contribution": 0.0,
+        "note": "warming up (need ~15-20 sessions of history)"
+      },
+      {
+        "factor": "news",
+        "weight": 17.1,
+        "active": true,
+        "sub": 0.4,
+        "contribution": 6.83,
+        "note": "Bullish catalysts: NVIDIA-SK Hynix multiyear HBM partnership, Micron earnings beat + raised targets, Jensen Huang says memory shortage 'could last years', Samsung/SK Hynix to unveil investment plans. Offset by broad risk-off tape (KOSPI circuit breaker Fri)."
+      },
+      {
+        "factor": "foreign_flows",
+        "weight": 8,
+        "active": false,
+        "sub": null,
+        "contribution": 0.0,
+        "note": "no foreign-flow data (published post-session)"
+      }
+    ]
+  },
+  "accuracy": {
+    "graded": 0,
+    "hits": 0,
+    "hit_rate": null
+  },
+  "recent": [
+    {
+      "as_of": "2026-06-28T09:30:00Z",
+      "target_date": "2026-06-29",
+      "prev_close": 2673000,
+      "call": "DOWN",
+      "score": -48.55,
+      "conviction": "High",
+      "confidence_pct": 71.8,
+      "actual": null,
+      "actual_return_pct": null,
+      "correct": null
+    }
+  ]
+}
