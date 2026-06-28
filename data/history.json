@@ -483,13 +483,13 @@
   ],
   "predictions": [
     {
-      "as_of": "2026-06-28T14:59:03.205053+00:00",
+      "as_of": "2026-06-28T23:36:14.502833+00:00",
       "target_date": "2026-06-29",
       "prev_close": 2673000.0,
       "call": "NEUTRAL",
-      "score": -12.9,
+      "score": -13.51,
       "conviction": "Low",
-      "confidence_pct": 55.8,
+      "confidence_pct": 56.1,
       "actual": null,
       "actual_return_pct": null,
       "correct": null

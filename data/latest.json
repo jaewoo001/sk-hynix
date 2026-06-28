@@ -1,10 +1,10 @@
 {
-  "generated": "2026-06-28T14:59:03.231610Z",
+  "generated": "2026-06-28T23:36:14.528395Z",
   "target_date": "2026-06-29",
   "stock": "SK Hynix (KRX:000660)",
   "prev_close": 2673000.0,
   "inputs": {
-    "as_of": "2026-06-28T14:59:03.205053+00:00",
+    "as_of": "2026-06-28T23:36:14.502833+00:00",
     "target_date": "2026-06-29",
     "last_session_date": "2026-06-26",
     "hynix_prev_close": 2673000.0,
@@ -14,10 +14,10 @@
     "nvda_pct": null,
     "nasdaq_pct": -0.24,
     "vix_pct": -2.54,
-    "usdkrw": 1535.0,
+    "usdkrw": 1535.11,
     "usdkrw_pct": -0.74,
-    "news_sentiment": 0.91,
-    "news_note": "\ud0a4\uc6cc\ub4dc \uc2a4\uce94: \ud638\uc7ac 65\uac74 \u00b7 \uc545\uc7ac 3\uac74 (\ub2e4\ub9e4\uccb4 \uc81c\ubaa9 188\uac1c)",
+    "news_sentiment": 0.87,
+    "news_note": "\ud0a4\uc6cc\ub4dc \uc2a4\uce94: \ud638\uc7ac 59\uac74 \u00b7 \uc545\uc7ac 4\uac74 (\ub2e4\ub9e4\uccb4 \uc81c\ubaa9 190\uac1c)",
     "foreign_flow_signal": null,
     "foreign_flow_note": null,
     "data_sources": [
@@ -25,10 +25,10 @@
     ]
   },
   "result": {
-    "score": -12.9,
+    "score": -13.51,
     "call": "NEUTRAL",
     "conviction": "Low",
-    "confidence_pct": 55.8,
+    "confidence_pct": 56.1,
     "breakdown": [
       {
         "factor": "us_semis",
@@ -74,9 +74,9 @@
         "factor": "news",
         "weight": 15.2,
         "active": true,
-        "sub": 0.91,
-        "contribution": 13.85,
-        "note": "\ud0a4\uc6cc\ub4dc \uc2a4\uce94: \ud638\uc7ac 65\uac74 \u00b7 \uc545\uc7ac 3\uac74 (\ub2e4\ub9e4\uccb4 \uc81c\ubaa9 188\uac1c)"
+        "sub": 0.87,
+        "contribution": 13.24,
+        "note": "\ud0a4\uc6cc\ub4dc \uc2a4\uce94: \ud638\uc7ac 59\uac74 \u00b7 \uc545\uc7ac 4\uac74 (\ub2e4\ub9e4\uccb4 \uc81c\ubaa9 190\uac1c)"
       },
       {
         "factor": "foreign_flows",
@@ -95,13 +95,13 @@
   },
   "recent": [
     {
-      "as_of": "2026-06-28T14:59:03.205053+00:00",
+      "as_of": "2026-06-28T23:36:14.502833+00:00",
       "target_date": "2026-06-29",
       "prev_close": 2673000.0,
       "call": "NEUTRAL",
-      "score": -12.9,
+      "score": -13.51,
       "conviction": "Low",
-      "confidence_pct": 55.8,
+      "confidence_pct": 56.1,
       "actual": null,
       "actual_return_pct": null,
       "correct": null

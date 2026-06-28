@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-06-28T14:59:03.205053+00:00",
+  "as_of": "2026-06-28T23:36:14.502833+00:00",
   "target_date": "2026-06-29",
   "last_session_date": "2026-06-26",
   "hynix_prev_close": 2673000.0,
@@ -9,10 +9,10 @@
   "nvda_pct": null,
   "nasdaq_pct": -0.24,
   "vix_pct": -2.54,
-  "usdkrw": 1535.0,
+  "usdkrw": 1535.11,
   "usdkrw_pct": -0.74,
-  "news_sentiment": 0.91,
-  "news_note": "키워드 스캔: 호재 65건 · 악재 3건 (다매체 제목 188개)",
+  "news_sentiment": 0.87,
+  "news_note": "키워드 스캔: 호재 59건 · 악재 4건 (다매체 제목 190개)",
   "foreign_flow_signal": null,
   "foreign_flow_note": null,
   "data_sources": [
