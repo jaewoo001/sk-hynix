@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Render data/latest.json into a self-contained Korean dashboard.html."""
 import json, os, html, re
+from datetime import datetime, timedelta
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 LATEST = os.path.join(HERE, "data", "latest.json")
@@ -24,6 +25,14 @@ CALL_BG = {"UP": "#e7f6ec", "DOWN": "#fcebeb", "NEUTRAL": "#fbf3e0"}
 
 def esc(s):
     return html.escape(str(s))
+
+
+def to_kst(iso):
+    try:
+        dt = datetime.fromisoformat(iso.replace("Z", ""))
+        return (dt + timedelta(hours=9)).strftime("%Y-%m-%d %H:%M")
+    except Exception:
+        return (iso[:16].replace("T", " ") if iso else "—")
 
 
 def fmt(v, suffix="%"):
@@ -82,6 +91,7 @@ def main():
     acc = d["accuracy"]
     inp = d["inputs"]
     gen = d.get("generated", "")
+    gen_kst = to_kst(gen)
 
     rows = ""
     for b in r["breakdown"]:
@@ -182,7 +192,7 @@ tr.inactive {{ opacity:.5; }}
 </style></head>
 <body><div class="wrap">
   <h1>SK하이닉스 · KRX 000660 — 일일 주가 방향 예측</h1>
-  <div class="sub">예측 대상 거래일 <b>{esc(d['target_date'])}</b> · 전일 종가 {prev_close_str} · 생성 {esc(gen[:16].replace('T',' '))} UTC</div>
+  <div class="sub">예측 대상 거래일 <b>{esc(d['target_date'])}</b> · 전일 종가 {prev_close_str} · 생성 {esc(gen_kst)} KST</div>
 
   <div class="card callbox">
     <div class="callword">{esc(CALL_KR.get(call, call))}</div>
