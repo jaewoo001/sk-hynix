@@ -1,23 +1,23 @@
 {
-  "generated": "2026-06-29T23:32:42.859697Z",
-  "target_date": "2026-06-30",
+  "generated": "2026-06-30T23:43:15.235658Z",
+  "target_date": "2026-07-01",
   "stock": "SK Hynix (KRX:000660)",
-  "prev_close": 2628000.0,
+  "prev_close": 2650000.0,
   "inputs": {
-    "as_of": "2026-06-29T23:32:42.831892+00:00",
-    "target_date": "2026-06-30",
-    "last_session_date": "2026-06-29",
-    "hynix_prev_close": 2628000.0,
-    "last_session_return_pct": -1.68,
-    "sox_pct": 3.83,
-    "mu_pct": 1.14,
+    "as_of": "2026-06-30T23:43:15.209892+00:00",
+    "target_date": "2026-07-01",
+    "last_session_date": "2026-06-30",
+    "hynix_prev_close": 2650000.0,
+    "last_session_return_pct": 0.84,
+    "sox_pct": 3.92,
+    "mu_pct": 0.79,
     "nvda_pct": null,
-    "nasdaq_pct": 2.07,
-    "vix_pct": -4.13,
-    "usdkrw": 1535.24,
-    "usdkrw_pct": -0.73,
-    "news_sentiment": 0.74,
-    "news_note": "\ud0a4\uc6cc\ub4dc \uc2a4\uce94: \ud638\uc7ac 47\uac74 \u00b7 \uc545\uc7ac 7\uac74 (\ub2e4\ub9e4\uccb4 \uc81c\ubaa9 185\uac1c)",
+    "nasdaq_pct": 1.52,
+    "vix_pct": -6.8,
+    "usdkrw": 1541.73,
+    "usdkrw_pct": 0.42,
+    "news_sentiment": 0.88,
+    "news_note": "\ud0a4\uc6cc\ub4dc \uc2a4\uce94: \ud638\uc7ac 62\uac74 \u00b7 \uc545\uc7ac 4\uac74 (\ub2e4\ub9e4\uccb4 \uc81c\ubaa9 192\uac1c)",
     "foreign_flow_signal": null,
     "foreign_flow_note": null,
     "data_sources": [
@@ -25,7 +25,7 @@
     ]
   },
   "result": {
-    "score": 75.91,
+    "score": 68.24,
     "call": "UP",
     "conviction": "High",
     "confidence_pct": 72.0,
@@ -36,7 +36,7 @@
         "active": true,
         "sub": 1.0,
         "contribution": 39.13,
-        "note": "semis avg +2.22% (MU 1.14, SOX 3.83)"
+        "note": "semis avg +2.04% (MU 0.79, SOX 3.92)"
       },
       {
         "factor": "us_broad",
@@ -44,23 +44,23 @@
         "active": true,
         "sub": 1.0,
         "contribution": 13.04,
-        "note": "Nasdaq +2.07%, VIX -4.1%"
+        "note": "Nasdaq +1.52%, VIX -6.8%"
       },
       {
         "factor": "momentum",
         "weight": 13.0,
         "active": true,
-        "sub": -0.21,
-        "contribution": -2.74,
-        "note": "last move -1.68% (trend -0.21, reversion +0.00)"
+        "sub": 0.105,
+        "contribution": 1.37,
+        "note": "last move +0.84% (trend +0.10, reversion +0.00)"
       },
       {
         "factor": "fx",
         "weight": 8.7,
         "active": true,
-        "sub": 1.0,
-        "contribution": 8.7,
-        "note": "USD/KRW -0.73% (won stronger -> risk-on)"
+        "sub": -0.6,
+        "contribution": -5.22,
+        "note": "USD/KRW +0.42% (won weaker -> risk-off)"
       },
       {
         "factor": "technicals",
@@ -68,15 +68,15 @@
         "active": true,
         "sub": 0.6,
         "contribution": 6.52,
-        "note": "px vs MA20 +8.4%, RSI 60"
+        "note": "px vs MA20 +8.7%, RSI 66"
       },
       {
         "factor": "news",
         "weight": 15.2,
         "active": true,
-        "sub": 0.74,
-        "contribution": 11.26,
-        "note": "\ud0a4\uc6cc\ub4dc \uc2a4\uce94: \ud638\uc7ac 47\uac74 \u00b7 \uc545\uc7ac 7\uac74 (\ub2e4\ub9e4\uccb4 \uc81c\ubaa9 185\uac1c)"
+        "sub": 0.88,
+        "contribution": 13.39,
+        "note": "\ud0a4\uc6cc\ub4dc \uc2a4\uce94: \ud638\uc7ac 62\uac74 \u00b7 \uc545\uc7ac 4\uac74 (\ub2e4\ub9e4\uccb4 \uc81c\ubaa9 192\uac1c)"
       },
       {
         "factor": "foreign_flows",
@@ -89,9 +89,9 @@
     ]
   },
   "accuracy": {
-    "graded": 0,
-    "hits": 0,
-    "hit_rate": null
+    "graded": 1,
+    "hits": 1,
+    "hit_rate": 100.0
   },
   "recent": [
     {
@@ -112,6 +112,18 @@
       "prev_close": 2628000.0,
       "call": "UP",
       "score": 75.91,
+      "conviction": "High",
+      "confidence_pct": 72.0,
+      "actual": "UP",
+      "actual_return_pct": 0.84,
+      "correct": true
+    },
+    {
+      "as_of": "2026-06-30T23:43:15.209892+00:00",
+      "target_date": "2026-07-01",
+      "prev_close": 2650000.0,
+      "call": "UP",
+      "score": 68.24,
       "conviction": "High",
       "confidence_pct": 72.0,
       "actual": null,
