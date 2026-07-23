@@ -1,23 +1,23 @@
 {
-  "generated": "2026-07-22T23:28:26.893292Z",
-  "target_date": "2026-07-23",
+  "generated": "2026-07-23T23:26:22.746067Z",
+  "target_date": "2026-07-24",
   "stock": "SK Hynix (KRX:000660)",
-  "prev_close": 1830000.0,
+  "prev_close": 1919000.0,
   "inputs": {
-    "as_of": "2026-07-22T23:28:26.866415+00:00",
-    "target_date": "2026-07-23",
-    "last_session_date": "2026-07-22",
-    "hynix_prev_close": 1830000.0,
-    "last_session_return_pct": -0.33,
-    "sox_pct": 0.44,
-    "mu_pct": -1.17,
+    "as_of": "2026-07-23T23:26:22.718557+00:00",
+    "target_date": "2026-07-24",
+    "last_session_date": "2026-07-23",
+    "hynix_prev_close": 1919000.0,
+    "last_session_return_pct": 4.86,
+    "sox_pct": -0.54,
+    "mu_pct": 3.2,
     "nvda_pct": null,
-    "nasdaq_pct": -0.57,
-    "vix_pct": -2.4,
-    "usdkrw": 1476.21,
-    "usdkrw_pct": -0.24,
-    "news_sentiment": 0.69,
-    "news_note": "\ud0a4\uc6cc\ub4dc \uc2a4\uce94: \ud638\uc7ac 61\uac74 \u00b7 \uc545\uc7ac 11\uac74 (\ub2e4\ub9e4\uccb4 \uc81c\ubaa9 191\uac1c)",
+    "nasdaq_pct": -2.15,
+    "vix_pct": 12.38,
+    "usdkrw": 1474.55,
+    "usdkrw_pct": -0.07,
+    "news_sentiment": 0.78,
+    "news_note": "\ud0a4\uc6cc\ub4dc \uc2a4\uce94: \ud638\uc7ac 58\uac74 \u00b7 \uc545\uc7ac 7\uac74 (\ub2e4\ub9e4\uccb4 \uc81c\ubaa9 190\uac1c)",
     "foreign_flow_signal": null,
     "foreign_flow_note": null,
     "data_sources": [
@@ -25,42 +25,42 @@
     ]
   },
   "result": {
-    "score": -8.3,
-    "call": "NEUTRAL",
-    "conviction": "Low",
-    "confidence_pct": 53.7,
+    "score": 33.03,
+    "call": "UP",
+    "conviction": "Moderate",
+    "confidence_pct": 64.9,
     "breakdown": [
       {
         "factor": "us_semis",
         "weight": 39.1,
         "active": true,
-        "sub": -0.263,
-        "contribution": -10.29,
-        "note": "semis avg -0.53% (MU -1.17, SOX 0.44)"
+        "sub": 0.852,
+        "contribution": 33.34,
+        "note": "semis avg +1.70% (MU 3.2, SOX -0.54)"
       },
       {
         "factor": "us_broad",
         "weight": 13.0,
         "active": true,
-        "sub": -0.34,
-        "contribution": -4.43,
-        "note": "Nasdaq -0.57%, VIX -2.4%"
+        "sub": -1.0,
+        "contribution": -13.04,
+        "note": "Nasdaq -2.15%, VIX +12.4%"
       },
       {
         "factor": "momentum",
         "weight": 13.0,
         "active": true,
-        "sub": -0.041,
-        "contribution": -0.54,
-        "note": "last move -0.33% (trend -0.04, reversion +0.00)"
+        "sub": 0.5,
+        "contribution": 6.52,
+        "note": "last move +4.86% (trend +0.50, reversion +0.00)"
       },
       {
         "factor": "fx",
         "weight": 8.7,
         "active": true,
-        "sub": 0.343,
-        "contribution": 2.98,
-        "note": "USD/KRW -0.24% (won stronger -> risk-on)"
+        "sub": 0.1,
+        "contribution": 0.87,
+        "note": "USD/KRW -0.07% (won stronger -> risk-on)"
       },
       {
         "factor": "technicals",
@@ -68,15 +68,15 @@
         "active": true,
         "sub": -0.6,
         "contribution": -6.52,
-        "note": "px vs MA20 -18.2%, RSI 32"
+        "note": "px vs MA20 -12.9%, RSI 42"
       },
       {
         "factor": "news",
         "weight": 15.2,
         "active": true,
-        "sub": 0.69,
-        "contribution": 10.5,
-        "note": "\ud0a4\uc6cc\ub4dc \uc2a4\uce94: \ud638\uc7ac 61\uac74 \u00b7 \uc545\uc7ac 11\uac74 (\ub2e4\ub9e4\uccb4 \uc81c\ubaa9 191\uac1c)"
+        "sub": 0.78,
+        "contribution": 11.87,
+        "note": "\ud0a4\uc6cc\ub4dc \uc2a4\uce94: \ud638\uc7ac 58\uac74 \u00b7 \uc545\uc7ac 7\uac74 (\ub2e4\ub9e4\uccb4 \uc81c\ubaa9 190\uac1c)"
       },
       {
         "factor": "foreign_flows",
@@ -306,6 +306,18 @@
       "score": -8.3,
       "conviction": "Low",
       "confidence_pct": 53.7,
+      "actual": "UP",
+      "actual_return_pct": 4.86,
+      "correct": null
+    },
+    {
+      "as_of": "2026-07-23T23:26:22.718557+00:00",
+      "target_date": "2026-07-24",
+      "prev_close": 1919000.0,
+      "call": "UP",
+      "score": 33.03,
+      "conviction": "Moderate",
+      "confidence_pct": 64.9,
       "actual": null,
       "actual_return_pct": null,
       "correct": null
