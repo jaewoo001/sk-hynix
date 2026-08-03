@@ -867,13 +867,13 @@
       "correct": true
     },
     {
-      "as_of": "2026-08-02T23:26:27.618043+00:00",
+      "as_of": "2026-08-03T23:33:15.994072+00:00",
       "target_date": "2026-08-03",
       "prev_close": 1718000.0,
-      "call": "DOWN",
-      "score": -33.06,
-      "conviction": "Moderate",
-      "confidence_pct": 64.9,
+      "call": "UP",
+      "score": 40.77,
+      "conviction": "High",
+      "confidence_pct": 68.3,
       "actual": null,
       "actual_return_pct": null,
       "correct": null
