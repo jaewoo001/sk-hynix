@@ -587,6 +587,14 @@
     {
       "date": "2026-08-05",
       "close": 1668000.0
+    },
+    {
+      "date": "2026-08-06",
+      "close": 1495000.0
+    },
+    {
+      "date": "2026-08-07",
+      "close": 1450000.0
     }
   ],
   "predictions": [
@@ -910,6 +918,18 @@
       "score": -2.8,
       "conviction": "Low",
       "confidence_pct": 51.3,
+      "actual": null,
+      "actual_return_pct": null,
+      "correct": null
+    },
+    {
+      "as_of": "2026-08-07T01:36:05.274486+00:00",
+      "target_date": "2026-08-10",
+      "prev_close": 1450000.0,
+      "call": "NEUTRAL",
+      "score": -14.02,
+      "conviction": "Low",
+      "confidence_pct": 56.3,
       "actual": null,
       "actual_return_pct": null,
       "correct": null
