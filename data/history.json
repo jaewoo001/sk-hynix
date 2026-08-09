@@ -923,13 +923,13 @@
       "correct": null
     },
     {
-      "as_of": "2026-08-07T01:36:05.274486+00:00",
+      "as_of": "2026-08-09T22:56:49.246061+00:00",
       "target_date": "2026-08-10",
-      "prev_close": 1450000.0,
-      "call": "NEUTRAL",
-      "score": -14.02,
-      "conviction": "Low",
-      "confidence_pct": 56.3,
+      "prev_close": 1422000.0,
+      "call": "UP",
+      "score": 31.92,
+      "conviction": "Moderate",
+      "confidence_pct": 64.4,
       "actual": null,
       "actual_return_pct": null,
       "correct": null
