@@ -1199,13 +1199,13 @@
       "correct": false
     },
     {
-      "as_of": "2026-09-03T00:24:30.043986+00:00",
+      "as_of": "2026-09-04T00:12:42.481208+00:00",
       "target_date": "2026-09-04",
-      "prev_close": 1642000.0,
-      "call": "NEUTRAL",
-      "score": 3.56,
-      "conviction": "Low",
-      "confidence_pct": 51.6,
+      "prev_close": 1596000.0,
+      "call": "UP",
+      "score": 54.06,
+      "conviction": "High",
+      "confidence_pct": 72.0,
       "actual": null,
       "actual_return_pct": null,
       "correct": null
