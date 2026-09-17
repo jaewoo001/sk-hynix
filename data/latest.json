@@ -1,23 +1,23 @@
 {
-  "generated": "2026-09-16T00:35:58.613490Z",
-  "target_date": "2026-09-17",
+  "generated": "2026-09-17T00:43:19.172186Z",
+  "target_date": "2026-09-18",
   "stock": "SK Hynix (KRX:000660)",
-  "prev_close": 1707000.0,
+  "prev_close": 1746000.0,
   "inputs": {
-    "as_of": "2026-09-16T00:35:58.590924+00:00",
-    "target_date": "2026-09-17",
-    "last_session_date": "2026-09-16",
-    "hynix_prev_close": 1707000.0,
-    "last_session_return_pct": 1.01,
-    "sox_pct": 0.4,
-    "mu_pct": -5.25,
+    "as_of": "2026-09-17T00:43:19.154853+00:00",
+    "target_date": "2026-09-18",
+    "last_session_date": "2026-09-17",
+    "hynix_prev_close": 1746000.0,
+    "last_session_return_pct": -0.74,
+    "sox_pct": 0.63,
+    "mu_pct": 0.39,
     "nvda_pct": null,
-    "nasdaq_pct": -0.78,
-    "vix_pct": 0.58,
-    "usdkrw": 1369.38,
-    "usdkrw_pct": 1.77,
-    "news_sentiment": 0.55,
-    "news_note": "\ud0a4\uc6cc\ub4dc \uc2a4\uce94: \ud638\uc7ac 55\uac74 \u00b7 \uc545\uc7ac 16\uac74 (\ub2e4\ub9e4\uccb4 \uc81c\ubaa9 189\uac1c)",
+    "nasdaq_pct": -0.01,
+    "vix_pct": 2.97,
+    "usdkrw": 1377.38,
+    "usdkrw_pct": 1.01,
+    "news_sentiment": 0.58,
+    "news_note": "\ud0a4\uc6cc\ub4dc \uc2a4\uce94: \ud638\uc7ac 45\uac74 \u00b7 \uc545\uc7ac 12\uac74 (\ub2e4\ub9e4\uccb4 \uc81c\ubaa9 193\uac1c)",
     "foreign_flow_signal": null,
     "foreign_flow_note": null,
     "data_sources": [
@@ -25,34 +25,34 @@
     ]
   },
   "result": {
-    "score": -45.47,
-    "call": "DOWN",
-    "conviction": "High",
-    "confidence_pct": 70.5,
+    "score": 9.7,
+    "call": "NEUTRAL",
+    "conviction": "Low",
+    "confidence_pct": 54.4,
     "breakdown": [
       {
         "factor": "us_semis",
         "weight": 39.1,
         "active": true,
-        "sub": -1.0,
-        "contribution": -39.13,
-        "note": "semis avg -2.99% (MU -5.25, SOX 0.4)"
+        "sub": 0.243,
+        "contribution": 9.51,
+        "note": "semis avg +0.49% (MU 0.39, SOX 0.63)"
       },
       {
         "factor": "us_broad",
         "weight": 13.0,
         "active": true,
-        "sub": -0.53,
-        "contribution": -6.91,
-        "note": "Nasdaq -0.78%, VIX +0.6%"
+        "sub": -0.056,
+        "contribution": -0.73,
+        "note": "Nasdaq -0.01%, VIX +3.0%"
       },
       {
         "factor": "momentum",
         "weight": 13.0,
         "active": true,
-        "sub": 0.126,
-        "contribution": 1.65,
-        "note": "last move +1.01% (trend +0.13, reversion +0.00)"
+        "sub": -0.092,
+        "contribution": -1.21,
+        "note": "last move -0.74% (trend -0.09, reversion +0.00)"
       },
       {
         "factor": "fx",
@@ -60,23 +60,23 @@
         "active": true,
         "sub": -1.0,
         "contribution": -8.7,
-        "note": "USD/KRW +1.77% (won weaker -> risk-off)"
+        "note": "USD/KRW +1.01% (won weaker -> risk-off)"
       },
       {
         "factor": "technicals",
         "weight": 10.9,
         "active": true,
-        "sub": -0.069,
-        "contribution": -0.75,
-        "note": "px vs MA20 -0.6%, RSI 47"
+        "sub": 0.184,
+        "contribution": 2.0,
+        "note": "px vs MA20 +1.5%, RSI 55"
       },
       {
         "factor": "news",
         "weight": 15.2,
         "active": true,
-        "sub": 0.55,
-        "contribution": 8.37,
-        "note": "\ud0a4\uc6cc\ub4dc \uc2a4\uce94: \ud638\uc7ac 55\uac74 \u00b7 \uc545\uc7ac 16\uac74 (\ub2e4\ub9e4\uccb4 \uc81c\ubaa9 189\uac1c)"
+        "sub": 0.58,
+        "contribution": 8.83,
+        "note": "\ud0a4\uc6cc\ub4dc \uc2a4\uce94: \ud638\uc7ac 45\uac74 \u00b7 \uc545\uc7ac 12\uac74 (\ub2e4\ub9e4\uccb4 \uc81c\ubaa9 193\uac1c)"
       },
       {
         "factor": "foreign_flows",
@@ -89,23 +89,11 @@
     ]
   },
   "accuracy": {
-    "graded": 40,
-    "hits": 21,
-    "hit_rate": 52.5
+    "graded": 41,
+    "hits": 22,
+    "hit_rate": 53.7
   },
   "recent": [
-    {
-      "as_of": "2026-07-29T23:28:39.074516+00:00",
-      "target_date": "2026-07-30",
-      "prev_close": 1401000.0,
-      "call": "DOWN",
-      "score": -45.81,
-      "conviction": "High",
-      "confidence_pct": 70.6,
-      "actual": "DOWN",
-      "actual_return_pct": -5.64,
-      "correct": true
-    },
     {
       "as_of": "2026-07-30T23:30:40.475409+00:00",
       "target_date": "2026-07-31",
@@ -450,6 +438,18 @@
       "score": -45.47,
       "conviction": "High",
       "confidence_pct": 70.5,
+      "actual": "DOWN",
+      "actual_return_pct": -0.74,
+      "correct": true
+    },
+    {
+      "as_of": "2026-09-17T00:43:19.154853+00:00",
+      "target_date": "2026-09-18",
+      "prev_close": 1746000.0,
+      "call": "NEUTRAL",
+      "score": 9.7,
+      "conviction": "Low",
+      "confidence_pct": 54.4,
       "actual": null,
       "actual_return_pct": null,
       "correct": null

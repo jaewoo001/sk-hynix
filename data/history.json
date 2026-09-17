@@ -703,6 +703,10 @@
     {
       "date": "2026-09-16",
       "close": 1707000.0
+    },
+    {
+      "date": "2026-09-17",
+      "close": 1746000.0
     }
   ],
   "predictions": [
@@ -1326,6 +1330,18 @@
       "score": -45.47,
       "conviction": "High",
       "confidence_pct": 70.5,
+      "actual": "DOWN",
+      "actual_return_pct": -0.74,
+      "correct": true
+    },
+    {
+      "as_of": "2026-09-17T00:43:19.154853+00:00",
+      "target_date": "2026-09-18",
+      "prev_close": 1746000.0,
+      "call": "NEUTRAL",
+      "score": 9.7,
+      "conviction": "Low",
+      "confidence_pct": 54.4,
       "actual": null,
       "actual_return_pct": null,
       "correct": null
