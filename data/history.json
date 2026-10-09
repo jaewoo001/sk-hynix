@@ -1527,13 +1527,13 @@
       "correct": null
     },
     {
-      "as_of": "2026-10-08T02:07:08.192224+00:00",
+      "as_of": "2026-10-09T02:20:48.565490+00:00",
       "target_date": "2026-10-09",
-      "prev_close": 1753000.0,
-      "call": "UP",
-      "score": 50.8,
+      "prev_close": 1681000.0,
+      "call": "DOWN",
+      "score": -47.01,
       "conviction": "High",
-      "confidence_pct": 72.0,
+      "confidence_pct": 71.2,
       "actual": null,
       "actual_return_pct": null,
       "correct": null
