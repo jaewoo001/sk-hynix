@@ -1,0 +1,21 @@
+{
+  "as_of": "2026-10-14T01:17:52.702041+00:00",
+  "target_date": "2026-10-15",
+  "last_session_date": "2026-10-14",
+  "hynix_prev_close": 1472000.0,
+  "last_session_return_pct": 2.01,
+  "sox_pct": -0.23,
+  "mu_pct": -3.88,
+  "nvda_pct": null,
+  "nasdaq_pct": -0.15,
+  "vix_pct": 0.39,
+  "usdkrw": 1339.58,
+  "usdkrw_pct": 0.41,
+  "news_sentiment": 0.37,
+  "news_note": "키워드 스캔: 호재 54건 · 악재 25건 (다매체 제목 170개)",
+  "foreign_flow_signal": null,
+  "foreign_flow_note": null,
+  "data_sources": [
+    "yfinance + Google News RSS (multi-outlet) + pykrx(외국인 수급)"
+  ]
+}
